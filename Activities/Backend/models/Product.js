@@ -11,7 +11,7 @@ const productSchema = new mongoose.Schema(
       type: String,
       unique: true,
       lowercase: true,
-    }, // e.g., “lucky-me-pancit-canton”
+    }, 
     description: {
       type: String,
     },
