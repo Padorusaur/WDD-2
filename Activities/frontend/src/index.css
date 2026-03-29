@@ -2,7 +2,6 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   /* Theme Colors */
   --primary-blue: #1e90ff;
   --secondary-green: #10b981;
@@ -13,16 +12,13 @@
   --error-red: #ef4444;
   --hover-blue: #1d4ed8;
   --hover-green: #059669;
-
   color: var(--text-dark);
   background-color: var(--background-white);
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 a {
   font-weight: 500;
   color: var(--primary-blue);
@@ -32,7 +28,6 @@ a:hover {
   color: var(--hover-blue);
   text-decoration: underline;
 }
-
 body {
   margin: 0;
   display: flex;
@@ -46,16 +41,13 @@ body {
     var(--secondary-green) 100%
   );
 }
-
 #root {
   width: 100%;
 }
-
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
-
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -79,11 +71,9 @@ button:disabled {
   opacity: 0.6;
   cursor: not-allowed;
 }
-
 * {
   box-sizing: border-box;
 }
-
 @media (prefers-color-scheme: light) {
   :root {
     color: var(--text-dark);

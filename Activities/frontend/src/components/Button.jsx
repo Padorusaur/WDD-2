@@ -1,15 +1,21 @@
-import "../styles/Button.css";
-const Button = ({ children, variant = "primary", loading, ...props }) => {
-  return (
-    <button className={`btn btn-${variant}`} disabled={loading} {...props}>
-      {loading ? (
-        <>
-          <span className="Spinner">Loading...</span>
-        </>
-      ) : (
-        children
-      )}
-    </button>
-  );
+import './Button.css';
+
+const Button = ({
+    children,
+    variant = 'primary',
+    type = 'button',
+    loading = false,
+    disabled = false,
+    onClick,
+}) => {
+    const className = `btn btn-${variant}`;
+
+    return (
+        <button type={type} className={className} disabled={disabled || loading} onClick={onClick}>
+            {loading ? <span className="spinner" /> : null}
+            {children}
+        </button>
+    );
 };
+
 export default Button;

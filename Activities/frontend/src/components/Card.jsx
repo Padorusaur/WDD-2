@@ -1,12 +1,14 @@
-import "../styles/Card.css";
+import './Card.css';
+
 const Card = ({ title, children }) => {
-  return (
-    <div className="card-container">
-      <div className="card">
-        {title && <h2 className="card-title">{title}</h2>}
-        {children}
-      </div>
-    </div>
-  );
+    return (
+        <div className="card-container">
+            <div className="card">
+                {title ? <h1 className="card-title">{title}</h1> : null}
+                {children}
+            </div>
+        </div>
+    );
 };
+
 export default Card;

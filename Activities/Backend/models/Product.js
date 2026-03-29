@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import bcrypt from "bcryptjs";
 
 const productSchema = new mongoose.Schema(
   {
@@ -20,9 +19,13 @@ const productSchema = new mongoose.Schema(
       required: true,
       min: 0,
     },
+    image: {
+      type: String,
+      default: "",
+    },
     category: {
       type: String,
-      enum: [], //add your categories
+      default: "General",
     },
   },
   { timestamps: true },

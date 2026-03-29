@@ -1,14 +1,15 @@
-import "../styles/Input.css";
-const Input = ({ label, error, ...props }) => {
-  return (
-    <div className="input-group">
-      {label && <label className="input-label">{label}</label>}
-      <input
-        className={`input-field${error ? "input-error" : ""}`}
-        {...props}
-      />
-      {error && <span className="input-error-message">{error}</span>}
-    </div>
-  );
+import './Input.css';
+
+const Input = ({ label, id, error, ...props }) => {
+    return (
+        <div className="input-group">
+            <label className="input-label" htmlFor={id}>
+                {label}
+            </label>
+            <input id={id} className={`input-field ${error ? 'input-error' : ''}`} {...props} />
+            {error ? <span className="error-message">{error}</span> : null}
+        </div>
+    );
 };
+
 export default Input;
